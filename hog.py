@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# ECE 471/536: Assignment 3 submission template
-
-
-#Using "as" nicknames a library so you don't have to use the full name
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
@@ -25,13 +21,11 @@ X : ndarray NxHxW array where N is the number of instances/images
                               HxW is the image dimensions
 
 Returns
-    features : NxD narray containing the histogram features (D = 2304)(10000x144) 
+    features : NxD narray containing the histogram features (Nx144) 
 -------
 
 """
-#20 marks: Histogram of Gradients
-
-
+#Histogram of Gradients
 # Reference for the algorithm: Navneet Dalal and Bill Triggs, "Histogram of Oriented Gradients for Human Detection"
 def hog(X):
     # lists to store the magnitude and angle of the gradient
@@ -133,7 +127,7 @@ def hog(X):
     pass
 
 
-# 5 marks: Split the input matrix A into cells
+# Split the input matrix A into cells
 def split_into_cells(A, cell_size=8):
     final_split = []
     # Split an image into 8 x 8 cells for all N images
